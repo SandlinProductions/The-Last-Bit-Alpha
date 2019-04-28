@@ -1,0 +1,15 @@
+newmtl Circuit_Brench
+map_Kd 7624.jpg
+map_Pm 7624.jpg
+map_d 4224.jpg
+Kd 1 1 1
+d 1
+
+newmtl Circuit
+map_Kd seamless-pattern-of-circuit-board.png
+map_Pm seamless-pattern-of-circuit-board.png
+disp seamless-pattern-of-circuit-board2.png
+map_Ke seamless-pattern-of-circuit-board2.png
+Kd 1 1 1
+d 1
+
