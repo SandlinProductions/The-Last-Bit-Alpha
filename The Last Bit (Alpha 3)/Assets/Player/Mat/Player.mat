@@ -10,12 +10,12 @@ Material:
   m_Name: Player
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
   m_ShaderKeywords: _BLENDMODE_ALPHA _BLENDMODE_PRESERVE_SPECULAR_LIGHTING _DETAIL_MAP
-    _DISPLACEMENT_LOCK_TILING_SCALE _EMISSIVE_COLOR_MAP _ENABLE_FOG_ON_TRANSPARENT
-    _ENABLE_GEOMETRIC_SPECULAR_AA _HEIGHTMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _PIXEL_DISPLACEMENT
+    _DISPLACEMENT_LOCK_TILING_SCALE _DOUBLESIDED_ON _EMISSIVE_COLOR_MAP _ENABLE_FOG_ON_TRANSPARENT
+    _ENABLE_GEOMETRIC_SPECULAR_AA _NORMALMAP _NORMALMAP_TANGENT_SPACE _PIXEL_DISPLACEMENT
     _PIXEL_DISPLACEMENT_LOCK_OBJECT_SCALE _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap:
     RenderType: Transparent
@@ -33,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: 0c911230334994194bfd34a24a2e0a53, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -57,7 +57,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMap:
-        m_Texture: {fileID: 2800000, guid: 02ad9ef5474d447c2b1995e5b88ffba0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 65a4a4d36b2624bf48a8caf313849618, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
@@ -81,7 +81,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: bd9f8b8344c4243abb50f0f1fd988672, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IridescenceMaskMap:
@@ -93,7 +93,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0c911230334994194bfd34a24a2e0a53, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -105,7 +105,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: a739da7d3a53943af9cacd82229a63e9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4d4840afa456f4692828fb081b20e084, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -160,14 +160,14 @@ Material:
     - _BlendMode: 0
     - _BumpScale: 1
     - _CoatMask: 0
-    - _CullMode: 2
-    - _CullModeForward: 2
+    - _CullMode: 0
+    - _CullModeForward: 0
     - _Cutoff: 1
     - _DepthOffsetEnable: 0
-    - _DetailAlbedoScale: 1
+    - _DetailAlbedoScale: 0
     - _DetailNormalMapScale: 1
-    - _DetailNormalScale: 1
-    - _DetailSmoothnessScale: 1
+    - _DetailNormalScale: 0
+    - _DetailSmoothnessScale: 2
     - _DiffusionProfile: 0
     - _DiffusionProfileHash: 0
     - _DisplacementLockObjectScale: 1
@@ -187,7 +187,7 @@ Material:
     - _DistortionSrcBlend: 1
     - _DistortionVectorBias: -1
     - _DistortionVectorScale: 2
-    - _DoubleSidedEnable: 0
+    - _DoubleSidedEnable: 1
     - _DoubleSidedNormalMode: 1
     - _Drag: 1
     - _DstBlend: 10
@@ -206,13 +206,13 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HdrpVersion: 2
-    - _HeightAmplitude: 0.0016
+    - _HeightAmplitude: 0.099999994
     - _HeightCenter: 1
     - _HeightMapParametrization: 0
     - _HeightMax: 1
     - _HeightMin: -1
     - _HeightOffset: 0
-    - _HeightPoMAmplitude: 0.16
+    - _HeightPoMAmplitude: 10
     - _HeightTessAmplitude: 2
     - _HeightTessCenter: 0.5
     - _InitialBend: 1
@@ -225,7 +225,7 @@ Material:
     - _Metallic: 1
     - _Mode: 3
     - _NormalMapSpace: 0
-    - _NormalScale: 1
+    - _NormalScale: 0.18
     - _OcclusionStrength: 1
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
@@ -238,7 +238,7 @@ Material:
     - _SSRefractionProjectionModel: 0
     - _ShiverDirectionality: 0.5
     - _ShiverDrag: 0.2
-    - _Smoothness: 0
+    - _Smoothness: 1
     - _SmoothnessRemapMax: 0.5
     - _SmoothnessRemapMin: 0
     - _SmoothnessTextureChannel: 0
@@ -281,13 +281,13 @@ Material:
     - _ZTestModeDistortion: 4
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0, g: 0.44690275, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0.44690275, b: 1, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 16, g: 16, b: 16, a: 1}
+    - _EmissiveColor: {r: 0, g: 8, b: 6.7440643, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
