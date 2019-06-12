@@ -17,26 +17,26 @@ public class CameraTracking : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (playerController.facingRight == true)
-        {
-            float xTarget = trackingTarget.position.x + xOffset;
-            float yTarget = trackingTarget.position.y + yOffset;
+            if (playerController.facingRight == true)
+            {
+                float xTarget = trackingTarget.position.x + xOffset;
+                float yTarget = trackingTarget.position.y + yOffset;
 
-            float xNew = Mathf.Lerp(transform.position.x, xTarget, Time.deltaTime * followSpeed);
-            float yNew = Mathf.Lerp(transform.position.y, yTarget, Time.deltaTime * followSpeed);
+                float xNew = Mathf.Lerp(transform.position.x, xTarget, Time.deltaTime * followSpeed);
+                float yNew = Mathf.Lerp(transform.position.y, yTarget, Time.deltaTime * followSpeed);
 
-            transform.position = new Vector3(xNew, yNew, transform.position.z);
-        }
-        else if (playerController.facingRight == false)
-        {
-            float xTarget = trackingTarget.position.x + -xOffset;
-            float yTarget = trackingTarget.position.y + yOffset;
+                transform.position = new Vector3(xNew, yNew, transform.position.z);
+            }
+            else if (playerController.facingRight == false)
+            {
+                float xTarget = trackingTarget.position.x + -xOffset;
+                float yTarget = trackingTarget.position.y + yOffset;
 
-            float xNew = Mathf.Lerp(transform.position.x, xTarget, Time.deltaTime * followSpeed);
-            float yNew = Mathf.Lerp(transform.position.y, yTarget, Time.deltaTime * followSpeed);
+                float xNew = Mathf.Lerp(transform.position.x, xTarget, Time.deltaTime * followSpeed);
+                float yNew = Mathf.Lerp(transform.position.y, yTarget, Time.deltaTime * followSpeed);
 
-            transform.position = new Vector3(xNew, yNew, transform.position.z);
-        }
-
+                transform.position = new Vector3(xNew, yNew, transform.position.z);
+            }
     }
+  
 }
