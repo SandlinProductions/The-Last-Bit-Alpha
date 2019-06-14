@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CameraTracking : MonoBehaviour
 {
-    [SerializeField]
-    Transform trackingTarget;
+   
+    public Transform trackingTarget;
     [SerializeField]
     float xOffset;
     [SerializeField]
@@ -13,10 +13,13 @@ public class CameraTracking : MonoBehaviour
     [SerializeField]
     float followSpeed;
     public PlayerController playerController;
+    public bool isZoomedOout;
 
     // Update is called once per frame
     private void Update()
     {
+       // if (isZoomedOout == false)
+       // {
             if (playerController.facingRight == true)
             {
                 float xTarget = trackingTarget.position.x + xOffset;
@@ -37,6 +40,7 @@ public class CameraTracking : MonoBehaviour
 
                 transform.position = new Vector3(xNew, yNew, transform.position.z);
             }
+       // }
     }
   
 }
