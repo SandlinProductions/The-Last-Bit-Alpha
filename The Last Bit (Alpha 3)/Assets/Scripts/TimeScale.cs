@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class TimeScale : MonoBehaviour
 {
-  
-    public Abilities abilities;
+    public AudioClip slowMotionSound;
+    public AudioClip restoreMotionSound;
+    private Abilities abilities;
+    public bool timeIsSlowed;
 
     private void Awake()
     {
@@ -16,14 +18,31 @@ public class TimeScale : MonoBehaviour
     {
         if (abilities.GetComponent<Abilities>().timeShift == true)
         {
+            
             if (Input.GetButtonDown("Time") & PauseMenu.GameIsPaused == false)
             {
                 if (Time.timeScale == 1.0F)
                     Time.timeScale = 0.2F;
+                
                 else
                     Time.timeScale = 1.0F;
                 Time.fixedDeltaTime = 0.02F * Time.timeScale;
+                timeIsSlowed = !timeIsSlowed;
+                SlowSounds();
             }
+ 
+        }
+     
+    }
+    void SlowSounds()
+    {
+        if (timeIsSlowed == false)
+            {
+                SoundManager.instance.PlaySingle(restoreMotionSound);
+            }
+        if (timeIsSlowed == true)
+        {
+            SoundManager.instance.PlaySingle(slowMotionSound);
         }
     }
 }

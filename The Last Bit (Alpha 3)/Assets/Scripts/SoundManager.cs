@@ -68,5 +68,15 @@ public class SoundManager : MonoBehaviour
             musicSource.pitch = 1f;
             musicSource.volume = 1f;
         }
+        if(Time.timeScale <1)
+        {
+            musicSource.pitch = .5f;
+            musicSource.volume = .5f;
+        }
+        else if (Time.timeScale ==1f)
+        {
+            musicSource.pitch = 1f;
+            musicSource.volume = 1f;
+        }
     }
 }
