@@ -22,6 +22,7 @@ public class PauseMenu : MonoBehaviour
             Resume();
         }
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Time.timeScale = 1f;
         // Sets the scene to be able to use it in the Index
     }
     // Update is called once per frame
@@ -38,6 +39,10 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
 
+        }
+        if (Input.GetKeyDown(KeyCode.Joystick1Button3))
+        {
+            Replay();
         }
 
     }

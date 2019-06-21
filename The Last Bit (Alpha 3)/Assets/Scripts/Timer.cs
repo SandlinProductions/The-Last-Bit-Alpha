@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(GetComponent<PlayerController>().alive == false)
         {
