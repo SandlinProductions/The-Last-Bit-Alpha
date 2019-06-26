@@ -16,7 +16,7 @@ public class CollectableUpdating : MonoBehaviour
     [SerializeField]
     float followSpeed;
     public PlayerController playerController;
-    public bool isZoomedOout;
+    public GameObject particle;
 
     private void Update()
     {
@@ -47,19 +47,24 @@ public class CollectableUpdating : MonoBehaviour
 
     }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        SoundManager.instance.PlaySingle(collectingSound);
-        collected = true;
-        CollectableScoring.theScore += 1;
-        StartCoroutine(Collected());
+        if(collision.gameObject.tag == "Player")
+        {
+            GetComponent<BoxCollider2D>().isTrigger = true;
+            SoundManager.instance.PlaySingle(collectingSound);
+            collected = true;
+            CollectableScoring.theScore += 1;
+            StartCoroutine(Collected());
+            Instantiate(particle, transform.position, Quaternion.identity);
+        }
+        
     }
 
     IEnumerator Collected()
     {
         Debug.Log("Starting");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
 }
