@@ -42,7 +42,7 @@ public class CollectableUpdating : MonoBehaviour
 
                 transform.position = new Vector3(xNew, yNew, transform.position.z);
             }
-
+            particle.transform.RotateAround(Vector3.zero, Vector3.up, followSpeed * Time.deltaTime);
         }
 
     }
@@ -56,7 +56,7 @@ public class CollectableUpdating : MonoBehaviour
             collected = true;
             CollectableScoring.theScore += 1;
             StartCoroutine(Collected());
-            Instantiate(particle, transform.position, Quaternion.identity);
+            Instantiate(particle,transform.position, Quaternion.identity);
         }
         
     }

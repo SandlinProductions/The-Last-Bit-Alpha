@@ -5210,7 +5210,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawn: {x: 0, y: 0, z: 0}
-  deathParticles: {fileID: 0}
+  deathParticles: {fileID: 6187761286156212874, guid: 7b022a3fa0b3f184b985907144959950,
+    type: 3}
   respawnParticles: {fileID: 0}
   playersRender: {fileID: 9008392263019210499}
 --- !u!114 &6442165386718107736
@@ -5259,7 +5260,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888eca6d14b9349edaa55c03f3f754e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilities: {fileID: 0}
+  slowMotionSound: {fileID: 0}
+  restoreMotionSound: {fileID: 0}
+  timeIsSlowed: 0
 --- !u!95 &1914508613
 Animator:
   serializedVersion: 3
