@@ -56,7 +56,6 @@ public class CollectableUpdating : MonoBehaviour
             collected = true;
             CollectableScoring.theScore += 1;
             StartCoroutine(Collected());
-            Instantiate(particle,transform.position, Quaternion.identity);
         }
         
     }
@@ -64,7 +63,8 @@ public class CollectableUpdating : MonoBehaviour
     IEnumerator Collected()
     {
         Debug.Log("Starting");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.15f);
+        Instantiate(particle, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
