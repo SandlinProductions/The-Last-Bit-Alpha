@@ -52,7 +52,7 @@ public class CollectableUpdating : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             GetComponent<BoxCollider2D>().isTrigger = true;
-            SoundManager.instance.PlaySingle(collectingSound);
+            SoundManager.instance.RandomizeSfx(collectingSound);
             collected = true;
             CollectableScoring.theScore += 1;
             StartCoroutine(Collected());

@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e011de42a4db949889f2846a6065dd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectingSound: {fileID: 8300000, guid: 67174b1fef4ec4053b00e5423f09a3af, type: 3}
+  collectingSound: {fileID: 8300000, guid: ed0d9e3d23970404bbd3cb2e2108ac57, type: 3}
   trackingTarget: {fileID: 0}
   xOffset: 0
   yOffset: 0
